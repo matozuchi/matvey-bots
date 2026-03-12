@@ -93,7 +93,7 @@ const SITE_COPY = {
       },
       siteCopy: {
         en: "A simple place to browse Matvey's Telegram bots, read what each one does, and jump straight into Telegram.",
-        ru: "Простое место, где можно посмотреть ботов Matvey, понять, что делает каждый из них, и сразу перейти в Telegram."
+        ru: "Телеграм боты на все случаи жизни которые использует Матвей. Теперь доступны для всех!"
       },
       footer: {
         en: "Matvey's Bots • Telegram tools with clear descriptions and direct links.",
