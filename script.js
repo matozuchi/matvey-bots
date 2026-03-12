@@ -77,7 +77,7 @@ const SITE_COPY = {
     home: {
       title: {
         en: "Matvey's Bots",
-        ru: "Matvey's Bots"
+        ru: "Боты Матвея"
       },
       description: {
         en: "Explore Matvey's Telegram bots with clear descriptions and direct links to open them in Telegram.",
@@ -89,7 +89,7 @@ const SITE_COPY = {
       },
       siteTitle: {
         en: "Matvey's Bots",
-        ru: "Matvey's Bots"
+        ru: "Боты Матвея"
       },
       siteCopy: {
         en: "A simple place to browse Matvey's Telegram bots, read what each one does, and jump straight into Telegram.",
@@ -97,13 +97,13 @@ const SITE_COPY = {
       },
       footer: {
         en: "Matvey's Bots • Telegram tools with clear descriptions and direct links.",
-        ru: "Matvey's Bots • Telegram-инструменты с понятными описаниями и прямыми ссылками."
+        ru: "Боты Матвея • Telegram-инструменты с понятными описаниями и прямыми ссылками."
       }
     },
     bots: {
       title: {
         en: "Bots • Matvey's Bots",
-        ru: "Боты • Matvey's Bots"
+        ru: "Каталог • Боты Матвея"
       },
       description: {
         en: "Browse Matvey's Telegram bots, read what each one does, and open them directly in Telegram.",
@@ -115,7 +115,7 @@ const SITE_COPY = {
       },
       siteTitle: {
         en: "Matvey's Bots",
-        ru: "Matvey's Bots"
+        ru: "Боты Матвея"
       },
       siteCopy: {
         en: "Browse the collection, see what each bot does, and open the ones that are live directly in Telegram.",
@@ -123,7 +123,7 @@ const SITE_COPY = {
       },
       footer: {
         en: "Matvey's Bots • Built to make every Telegram bot easy to discover.",
-        ru: "Matvey's Bots • Сделан так, чтобы каждого Telegram-бота было легко найти."
+        ru: "Боты Матвея • Сделан так, чтобы каждого Telegram-бота было легко найти."
       }
     }
   }
