@@ -11,47 +11,43 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body data-page="bots">
     <div class="page-shell">
       <header class="site-header">
+        <div class="top-controls">
+          <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language toggle">
+            <button type="button" class="lang-button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" data-lang="ru" aria-pressed="false">RU</button>
+          </div>
+        </div>
+
         <div class="brand-lockup">
-          <p class="eyebrow">Telegram Bot Directory</p>
-          <h1 class="site-title">Matvey's Bots</h1>
-          <p class="site-copy">
+          <p class="eyebrow" id="eyebrow-text">Telegram Bot Directory</p>
+          <h1 class="site-title" id="site-title">Matvey's Bots</h1>
+          <p class="site-copy" id="site-copy">
             Browse the collection, see what each bot does, and open the ones that are live
             directly in Telegram.
           </p>
-          <div class="stat-row" aria-label="Site stats">
+          <div class="stat-row" id="stat-row" aria-label="Site stats">
             <div class="stat-pill">
               <span class="stat-value" id="bot-count">0</span>
-              <span class="stat-label">Bots listed</span>
+              <span class="stat-label" id="bot-count-label">Bots listed</span>
             </div>
             <div class="stat-pill">
               <span class="stat-value" id="live-count">0</span>
-              <span class="stat-label">Live Telegram links</span>
+              <span class="stat-label" id="live-count-label">Live Telegram links</span>
             </div>
           </div>
         </div>
 
-        <div class="ticker" aria-label="What you can find here">
-          <div class="ticker-track">
-            <div class="ticker-group">
-              <span>Nutrition tracking</span>
-              <span>Daily habits</span>
-              <span>Quick Telegram access</span>
-            </div>
-            <div class="ticker-group" aria-hidden="true">
-              <span>Nutrition tracking</span>
-              <span>Daily habits</span>
-              <span>Quick Telegram access</span>
-            </div>
-          </div>
+        <div class="ticker" id="ticker" aria-label="What you can find here">
+          <div class="ticker-track" id="ticker-track"></div>
         </div>
       </header>
 
@@ -59,8 +55,8 @@
         <section class="directory-section" id="directory">
           <div class="directory-header directory-header-centered">
             <div>
-              <p class="section-tag">Bot directory</p>
-              <h2>Bot directory</h2>
+              <p class="section-tag" id="directory-eyebrow">Bot directory</p>
+              <h2 id="directory-title">Bot directory</h2>
             </div>
           </div>
           <div class="featured-card" id="featured-card"></div>
@@ -69,7 +65,7 @@
       </main>
 
       <footer class="site-footer">
-        <p>Matvey's Bots • Built to make every Telegram bot easy to discover.</p>
+        <p id="footer-copy">Matvey's Bots • Built to make every Telegram bot easy to discover.</p>
       </footer>
     </div>
 
