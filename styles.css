@@ -175,10 +175,40 @@ body::before {
 }
 
 .brand-lockup {
+  position: relative;
+  isolation: isolate;
   display: grid;
   justify-items: center;
   margin: 0 auto 28px;
   text-align: center;
+}
+
+.brand-lockup::before,
+.brand-lockup::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  background: url("./heart.png") center / contain no-repeat;
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+.brand-lockup::before {
+  top: 88px;
+  left: 50%;
+  width: clamp(132px, 16vw, 208px);
+  aspect-ratio: 1;
+  opacity: 0.18;
+  transform: translateX(-132%) rotate(-12deg);
+}
+
+.brand-lockup::after {
+  top: 168px;
+  left: 50%;
+  width: clamp(104px, 13vw, 164px);
+  aspect-ratio: 1;
+  opacity: 0.14;
+  transform: translateX(44%) rotate(11deg);
 }
 
 .site-title {
@@ -542,6 +572,18 @@ body::before {
   .page-shell {
     width: min(100% - 20px, 1160px);
     padding-top: 20px;
+  }
+
+  .brand-lockup::before {
+    top: 72px;
+    width: 104px;
+    transform: translateX(-112%) rotate(-12deg);
+  }
+
+  .brand-lockup::after {
+    top: 150px;
+    width: 82px;
+    transform: translateX(26%) rotate(11deg);
   }
 
   .top-controls {
