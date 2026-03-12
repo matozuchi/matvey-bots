@@ -67,18 +67,7 @@ body::before {
   margin-bottom: 16px;
 }
 
-.lang-toggle {
-  display: inline-flex;
-  gap: 6px;
-  padding: 6px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.46);
-  backdrop-filter: blur(12px);
-  box-shadow: var(--shadow);
-}
-
-.lang-button,
+.lang-toggle,
 .card-link,
 .repo-link {
   transition:
@@ -89,24 +78,63 @@ body::before {
     box-shadow 180ms ease;
 }
 
-.lang-button {
+.lang-toggle {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  min-width: 122px;
+  min-height: 50px;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.46);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  font: inherit;
+  cursor: pointer;
+}
+
+.lang-toggle::before {
+  position: absolute;
+  inset: 6px auto 6px 6px;
+  width: calc((100% - 12px) / 2);
+  content: "";
+  border-radius: 999px;
+  background: var(--ink);
+  transition: transform 180ms ease;
+  z-index: 0;
+}
+
+.lang-toggle[data-language="ru"]::before {
+  transform: translateX(100%);
+}
+
+.lang-option {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 38px;
   padding: 0 14px;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
   color: var(--muted);
-  font: inherit;
   font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  cursor: pointer;
+  transition: color 180ms ease;
 }
 
-.lang-button.is-active {
+.lang-toggle[data-language="en"] .lang-option[data-lang-label="en"],
+.lang-toggle[data-language="ru"] .lang-option[data-lang-label="ru"] {
   color: #fffaf3;
-  background: var(--ink);
+}
+
+.lang-toggle[data-language="en"] .lang-option[data-lang-label="ru"],
+.lang-toggle[data-language="ru"] .lang-option[data-lang-label="en"] {
+  color: var(--muted);
 }
 
 .eyebrow,
@@ -451,10 +479,15 @@ body::before {
   border: 1px dashed var(--line-strong);
 }
 
-.lang-button:hover,
+.lang-toggle:hover,
 .card-link:hover,
 .repo-link:hover {
   transform: translateY(-2px);
+}
+
+.lang-toggle:focus-visible {
+  outline: 2px solid rgba(194, 77, 44, 0.7);
+  outline-offset: 4px;
 }
 
 .card-link:hover {
@@ -508,7 +541,6 @@ body::before {
     width: 100%;
   }
 
-  .lang-toggle,
   .stat-row,
   .card-actions {
     flex-direction: column;

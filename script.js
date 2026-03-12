@@ -7,7 +7,7 @@ const featuredCard = document.querySelector("#featured-card");
 const botCount = document.querySelector("#bot-count");
 const liveCount = document.querySelector("#live-count");
 const tickerTrack = document.querySelector("#ticker-track");
-const languageButtons = Array.from(document.querySelectorAll(".lang-button"));
+const languageToggle = document.querySelector("#lang-toggle");
 const pageName = document.body.dataset.page || "home";
 
 const SITE_COPY = {
@@ -321,11 +321,12 @@ function renderStats(items, language) {
 }
 
 function updateToggleButtons(language) {
-  languageButtons.forEach((button) => {
-    const isActive = button.dataset.lang === language;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", isActive ? "true" : "false");
-  });
+  if (!languageToggle) {
+    return;
+  }
+
+  languageToggle.dataset.language = language;
+  languageToggle.setAttribute("aria-pressed", language === "ru" ? "true" : "false");
 }
 
 function renderPageCopy(language) {
@@ -389,10 +390,12 @@ function applyLanguage(language) {
 const featuredBot = bots.find((bot) => bot.featured) || bots[0];
 const secondaryBots = bots.filter((bot) => bot !== featuredBot).slice(0, 3);
 
-languageButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    applyLanguage(button.dataset.lang);
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    const currentLanguage = languageToggle.dataset.language === "ru" ? "ru" : "en";
+    const nextLanguage = currentLanguage === "ru" ? "en" : "ru";
+    applyLanguage(nextLanguage);
   });
-});
+}
 
 applyLanguage(getInitialLanguage());
