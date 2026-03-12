@@ -85,7 +85,7 @@ const SITE_COPY = {
       },
       eyebrow: {
         en: "Telegram Bot Directory",
-        ru: "Каталог Telegram-ботов"
+        ru: "Теперь доступны для всех!"
       },
       siteTitle: {
         en: "Matvey's Bots",
@@ -93,7 +93,7 @@ const SITE_COPY = {
       },
       siteCopy: {
         en: "A simple place to browse Matvey's Telegram bots, read what each one does, and jump straight into Telegram.",
-        ru: "Телеграм боты на все случаи жизни которые использует Матвей. Теперь доступны для всех!"
+        ru: "Каталог Телеграм-ботов на все случаи жизни которые использует Матвей."
       },
       footer: {
         en: "Matvey's Bots • Telegram tools with clear descriptions and direct links.",
@@ -111,7 +111,7 @@ const SITE_COPY = {
       },
       eyebrow: {
         en: "Telegram Bot Directory",
-        ru: "Каталог Telegram-ботов"
+        ru: "Теперь доступны для всех!"
       },
       siteTitle: {
         en: "Matvey's Bots",
