@@ -26,11 +26,11 @@ const SITE_COPY = {
     },
     botCountLabel: {
       en: "Bots listed",
-      ru: "Ботов в каталоге"
+      ru: "Бота"
     },
     liveCountLabel: {
       en: "Live Telegram links",
-      ru: "Активных ссылок в Telegram"
+      ru: "Пользователь"
     },
     directoryEyebrow: {
       en: "Bot directory",
