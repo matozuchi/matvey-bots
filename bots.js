@@ -25,6 +25,18 @@ window.MATVEY_BOTS = [
     repoUrl: ""
   },
   {
+    name: "Daily Habits Bot",
+    category: "Habits",
+    status: "Link coming soon",
+    summary:
+      "A simple Telegram bot for keeping daily habits, routines, and consistency checks in one lightweight place.",
+    highlights: ["Habit check-ins", "Simple routine logging", "Coming soon"],
+    telegramHandle: "",
+    telegramUrl: "",
+    repoLabel: "",
+    repoUrl: ""
+  },
+  {
     name: "Next Launch Slot",
     category: "Upcoming",
     status: "Ready for your next bot",

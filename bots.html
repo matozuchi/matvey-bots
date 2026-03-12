@@ -19,66 +19,50 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <div class="top-bar">
-          <a class="brand-mark" href="./index.html">Matvey's Bots</a>
-          <nav class="main-nav" aria-label="Main navigation">
-            <a class="nav-link" href="./index.html">Home</a>
-            <a class="nav-link nav-link-current" href="./bots.html">Bots</a>
-          </nav>
+        <div class="brand-lockup">
+          <p class="eyebrow">Telegram Bot Directory</p>
+          <h1 class="site-title">Matvey's Bots</h1>
+          <p class="site-copy">
+            Browse the collection, see what each bot does, and open the ones that are live
+            directly in Telegram.
+          </p>
+          <div class="stat-row" aria-label="Site stats">
+            <div class="stat-pill">
+              <span class="stat-value" id="bot-count">0</span>
+              <span class="stat-label">Bots listed</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-value" id="live-count">0</span>
+              <span class="stat-label">Live Telegram links</span>
+            </div>
+          </div>
         </div>
 
-        <section class="hero-grid">
-          <article class="lead-story">
-            <p class="eyebrow">Bot Directory</p>
-            <h1>Pick a bot, read what it does, and open it in Telegram.</h1>
-            <p class="lead-copy">
-              This page lists the bots currently available in Matvey's Bots. Some are already
-              live, and others are placeholders for launches that will be added next.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#directory">See all bots</a>
-              <a class="button button-secondary" href="./index.html">Back to home</a>
+        <div class="ticker" aria-label="What you can find here">
+          <div class="ticker-track">
+            <div class="ticker-group">
+              <span>Nutrition tracking</span>
+              <span>Daily habits</span>
+              <span>Quick Telegram access</span>
             </div>
-          </article>
-
-          <aside class="briefing-panel">
-            <p class="section-tag">Directory Snapshot</p>
-            <div class="briefing-stat">
-              <span class="briefing-value" id="bot-count">0</span>
-              <span class="briefing-label">Bots listed</span>
+            <div class="ticker-group" aria-hidden="true">
+              <span>Nutrition tracking</span>
+              <span>Daily habits</span>
+              <span>Quick Telegram access</span>
             </div>
-            <div class="briefing-stat">
-              <span class="briefing-value" id="live-count">0</span>
-              <span class="briefing-label">Live Telegram links</span>
-            </div>
-            <div class="briefing-note">
-              Each live card opens directly in Telegram. Bots without a live link stay marked
-              as coming soon.
-            </div>
-          </aside>
-        </section>
+          </div>
+        </div>
       </header>
 
       <main>
-        <section class="featured">
-          <div class="featured-header">
-            <p class="section-tag">Featured Bot</p>
-            <h2>Live now</h2>
+        <section class="directory-section" id="directory">
+          <div class="directory-header directory-header-centered">
+            <div>
+              <p class="section-tag">Bot directory</p>
+              <h2>Bot directory</h2>
+            </div>
           </div>
           <div class="featured-card" id="featured-card"></div>
-        </section>
-
-        <section class="directory-section" id="directory">
-          <div class="directory-header">
-            <div>
-              <p class="section-tag">All Bots</p>
-              <h2>Browse the collection</h2>
-            </div>
-            <p class="directory-copy">
-              Short descriptions first, Telegram buttons second, so the page stays clear and
-              easy to scan.
-            </p>
-          </div>
           <div class="bot-grid" id="bot-grid"></div>
         </section>
       </main>

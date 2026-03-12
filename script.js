@@ -132,7 +132,8 @@ function renderStats(items) {
 }
 
 const featuredBot = bots.find((bot) => bot.featured) || bots[0];
+const secondaryBots = bots.filter((bot) => bot !== featuredBot).slice(0, 3);
 
 renderFeatured(featuredBot);
-renderGrid(bots);
+renderGrid(secondaryBots);
 renderStats(bots);
