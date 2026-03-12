@@ -1,6 +1,6 @@
 # Matvey's Bots
 
-Static homepage for your Telegram bot directory, designed with a news-site look and ready for free hosting.
+Static website for your Telegram bot directory, with a landing page, a bot list, and direct Telegram links.
 
 ## Best free hosting option
 
@@ -18,7 +18,8 @@ If you later want a custom domain, analytics, or edge features, **Cloudflare Pag
 ## Files to edit
 
 - `bots.js`: add or update your Telegram bot links
-- `index.html`: page structure
+- `index.html`: landing page
+- `bots.html`: full bot directory page
 - `styles.css`: design
 - `script.js`: renders the bot cards from `bots.js`
 
@@ -28,6 +29,12 @@ Open `bots.js` and replace each empty `telegramUrl` value with the real Telegram
 
 ```js
 telegramUrl: "https://t.me/your_bot_username"
+```
+
+You can also use a Telegram handle:
+
+```js
+telegramHandle: "@your_bot_username"
 ```
 
 To add another bot, duplicate one object in the array and change the values.

@@ -6,7 +6,7 @@
     <title>Matvey's Bots</title>
     <meta
       name="description"
-      content="Matvey's Bots is a news-style homepage for Telegram bots, launches, and quick links."
+      content="Explore Matvey's Telegram bots with clear descriptions and direct links to open them in Telegram."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,64 +19,99 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <p class="eyebrow">Bot Gazette</p>
-        <div class="masthead">
-          <div>
-            <p class="issue-line">Lisbon Edition • Telegram Desk • Updated March 12, 2026</p>
-            <h1>Matvey's Bots</h1>
-          </div>
-          <a class="header-link" href="#directory">Open Directory</a>
+        <div class="top-bar">
+          <a class="brand-mark" href="./index.html">Matvey's Bots</a>
+          <nav class="main-nav" aria-label="Main navigation">
+            <a class="nav-link nav-link-current" href="./index.html">Home</a>
+            <a class="nav-link" href="./bots.html">Bots</a>
+          </nav>
         </div>
-        <div class="ticker" aria-label="Site updates">
+
+        <section class="hero-grid">
+          <article class="lead-story">
+            <p class="eyebrow">Telegram Bot Directory</p>
+            <h1>Simple Telegram bots, all in one place.</h1>
+            <p class="lead-copy">
+              Matvey's Bots is a home for the tools I build on Telegram. Each bot has a
+              short explanation so you can understand what it does before you open it, try
+              it, or share it with someone else.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="./bots.html">Browse bots</a>
+              <a class="button button-secondary" href="#how-it-works">How it works</a>
+            </div>
+          </article>
+
+          <aside class="briefing-panel">
+            <p class="section-tag">At A Glance</p>
+            <div class="briefing-stat">
+              <span class="briefing-value" id="bot-count">0</span>
+              <span class="briefing-label">Bots listed</span>
+            </div>
+            <div class="briefing-stat">
+              <span class="briefing-value" id="live-count">0</span>
+              <span class="briefing-label">Live Telegram links</span>
+            </div>
+            <div class="briefing-note">
+              This site is built as a lightweight static page, which makes GitHub Pages a
+              great free host for it.
+            </div>
+          </aside>
+        </section>
+
+        <div class="ticker" aria-label="What you can find here">
           <div class="ticker-track">
-            <span>Fresh links to Matvey's Telegram bots</span>
-            <span>Newsroom-style launch page</span>
-            <span>GitHub Pages ready</span>
-            <span>Add a new bot by editing one file</span>
-            <span>Fresh links to Matvey's Telegram bots</span>
-            <span>Newsroom-style launch page</span>
+            <span>Nutrition tracking</span>
+            <span>Daily habits</span>
+            <span>Creator analytics</span>
+            <span>Quick Telegram access</span>
+            <span>More bots coming soon</span>
+            <span>Nutrition tracking</span>
+            <span>Daily habits</span>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="hero-grid">
-          <article class="lead-story">
-            <p class="section-tag">Lead Story</p>
-            <h2>One homepage for every bot you launch, publish, or quietly ship at 2 a.m.</h2>
-            <p class="lead-copy">
-              This first edition of Matvey's Bots is built like a compact news front page:
-              clear headlines, quick summaries, and direct paths into Telegram. For now it
-              focuses on your bot directory, but the structure is ready for future launch
-              notes, changelogs, and featured updates.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#directory">Browse bots</a>
-              <a class="button button-secondary" href="#how-to-update">How to add links</a>
+        <section class="update-section" id="how-it-works">
+          <div class="directory-header">
+            <div>
+              <p class="section-tag">How It Works</p>
+              <h2>A simple way to explore every bot</h2>
             </div>
-          </article>
-
-          <aside class="briefing-panel">
-            <p class="section-tag">Newsroom Briefing</p>
-            <div class="briefing-stat">
-              <span class="briefing-value" id="bot-count">0</span>
-              <span class="briefing-label">Bots in this issue</span>
-            </div>
-            <div class="briefing-stat">
-              <span class="briefing-value" id="live-count">0</span>
-              <span class="briefing-label">Links ready to open</span>
-            </div>
-            <div class="briefing-note">
-              GitHub Pages is the best free host for this version because the site is fully
-              static, fast, and has no build step.
-            </div>
-          </aside>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Read the summary</h3>
+              <p>
+                Every bot card includes a short explanation so visitors immediately know
+                what the bot is for.
+              </p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Open it in Telegram</h3>
+              <p>
+                When a Telegram link is live, the button takes people straight to the bot
+                with one click.
+              </p>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Check back for new bots</h3>
+              <p>
+                The directory is easy to update, so new bots can be added without changing
+                the overall site design.
+              </p>
+            </article>
+          </div>
         </section>
 
-        <section class="featured" id="featured-story">
+        <section class="featured" id="featured-bot">
           <div class="featured-header">
             <p class="section-tag">Featured Bot</p>
-            <h2>Front page pick</h2>
+            <h2>Start here</h2>
           </div>
           <div class="featured-card" id="featured-card"></div>
         </section>
@@ -84,55 +119,22 @@
         <section class="directory-section" id="directory">
           <div class="directory-header">
             <div>
-              <p class="section-tag">Bot Directory</p>
-              <h2>Latest entries</h2>
+              <p class="section-tag">Preview</p>
+              <h2>Bot directory</h2>
             </div>
             <p class="directory-copy">
-              Each card is generated from one small data file, so future launches stay easy to
-              publish.
+              A short explanation for each bot, followed by a direct path into Telegram.
             </p>
           </div>
           <div class="bot-grid" id="bot-grid"></div>
-        </section>
-
-        <section class="update-section" id="how-to-update">
-          <div class="directory-header">
-            <div>
-              <p class="section-tag">Publisher Notes</p>
-              <h2>How to update this site</h2>
-            </div>
-          </div>
-          <div class="steps-grid">
-            <article class="step-card">
-              <span class="step-number">01</span>
-              <h3>Edit bot data</h3>
-              <p>
-                Open <code>bots.js</code> and replace each empty
-                <code>telegramUrl</code> with the real <code>https://t.me/...</code> link.
-              </p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">02</span>
-              <h3>Add new launches</h3>
-              <p>
-                Duplicate one bot object, update the title, summary, status, and category, and
-                the homepage will render it automatically.
-              </p>
-            </article>
-            <article class="step-card">
-              <span class="step-number">03</span>
-              <h3>Publish for free</h3>
-              <p>
-                Push this folder to GitHub, enable GitHub Pages, and your site is live without
-                a backend or paid plan.
-              </p>
-            </article>
+          <div class="section-actions">
+            <a class="button button-primary" href="./bots.html">Open full bots page</a>
           </div>
         </section>
       </main>
 
       <footer class="site-footer">
-        <p>Matvey's Bots • A Telegram bot front page built for free hosting.</p>
+        <p>Matvey's Bots • Telegram tools with clear descriptions and direct links.</p>
       </footer>
     </div>
 
