@@ -200,7 +200,7 @@ function renderTicker(language) {
   }
 
   const items = t(SITE_COPY.common.tickerItems, language, []);
-  const groups = [false, true]
+  const groups = [false, true, true]
     .map((isHidden) => {
       const spans = items
         .map((item) => `<span>${escapeHtml(item)}</span>`)
